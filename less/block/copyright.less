@@ -1,0 +1,43 @@
+.page-footer__copyright {
+  padding: 0 25px;
+  text-align: center;
+}
+
+.copyright__text {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.copyright__link {
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__copyright {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width: 50%;
+    order: 1;
+  }
+
+  .copyright__link {
+    max-width: 160px;
+    margin-right: 0;
+  }
+
+  .copyright__text {
+    margin: 0;
+    padding-right: 45px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__copyright {
+    order: 2;
+    width: 33.33%;
+  }
+}

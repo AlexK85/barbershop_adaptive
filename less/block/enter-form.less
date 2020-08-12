@@ -1,0 +1,134 @@
+.enter-form {
+  position: absolute;
+  top: 135px;
+  left: 50%;
+  z-index: 1000;
+
+  width: 280px;
+  padding: 30px 20px;
+  padding-bottom: 35px;
+
+  color: #000000;
+
+  background-color: #f8f5f2;
+
+  transform: translateX(-50%);
+  box-shadow: 0 0 40px 4px;
+
+  opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+  transition: 1s; /*Скорость перехода состояния элемента*/
+  animation: show 0.5s 1; /* Указываем название анимации, её время и количество повторов*/
+  animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+  animation-delay: 0.5s; /* Задержка перед началом */
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.enter-form__title {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.enter-form__input {
+  width: 225px;
+  padding: 15px 20px;
+  padding-right: 35px;
+  margin-bottom: 5px;
+  border: 1px solid #e5eee5;
+}
+
+.enter-form__input--login {
+  background: #ffffff url(/img/email__icon.png) no-repeat 95% center;
+  background-size: 25px 25px;
+  // opacity: 0.5;
+}
+
+.enter-form__input--password {
+  background: #ffffff url(/img/password_icon.png) no-repeat 95% center;
+  background-size: 25px 25px;
+  // opacity: 0.5;
+}
+
+.enter-form__text {
+  margin-bottom: 30px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.enter-form__checkbox-field {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.enter-form__checkbox {
+  display: none;
+}
+
+.enter-form__checkbox-text {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.enter-form__link {
+  color: #000000;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.enter-form__link:hover {
+  text-decoration: none;
+}
+
+.enter-form__checkbox-text::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+
+  background-color: #ffffff;
+  border: 2px solid #e5ddd5;
+}
+
+.enter-form__checkbox:checked + .enter-form__checkbox-text::before {
+  background: #ffffff url(/img/tick.png) no-repeat center;
+  background-size: 25px 25px;
+}
+
+.enter-form__btn {
+  width: 130px;
+  height: 50px;
+  margin-top: 30px;
+
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.enter-form__btn--enter {
+  margin-right: 15px;
+  color: #ffffff;
+  background-color: #826550;
+}
+
+.enter-form__btn--close {
+  color: #000000;
+  border: 1px solid #e5ddd5;
+}
+
+.show-form {
+  display: block;
+}
+
+.show-form {
+  display: none;
+}

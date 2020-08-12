@@ -1,0 +1,45 @@
+.slider__list {
+  position: relative;
+  display: flex;
+  text-decoration: 1s;
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+
+  width: 80px;
+}
+
+/* Стилизация элементов переключения слайдера */
+.slider__toggle {
+  display: block;
+  box-sizing: border-box;
+  // margin-right: 20px;
+  padding: 0;
+
+  width: 10px; /* 7px */
+  height: 10px; /* 7px */
+
+  transform: rotate(45deg);
+}
+
+// .slider--nojs {
+//   overflow-x: scroll;
+// }
+
+@media (min-width: @tablet-width) {
+  .slider__toggles {
+    display: none;
+  }
+
+  .slider--nojs {
+    overflow-x: visible;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider--nojs {
+    overflow-x: hidden;
+  }
+}
